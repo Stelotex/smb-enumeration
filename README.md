@@ -5,7 +5,7 @@ Enumerating SMB protocol
 nmap --script smb-os-discovery $IP
 
 nmap --script nbstat.nse $IP
-
+nnmap -p 445 --script=smb-enum-share.nse,smb-enum-users.nse $IP
 nmap --script smb-enum-shares -p139,445 $IP 
 
 
